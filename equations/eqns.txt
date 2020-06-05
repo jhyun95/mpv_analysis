@@ -1,0 +1,14 @@
+Pr(R,C) \: \alpha \: N_R^C
+
+Pr(R,C;k_R) \: \alpha \: k_RN_R^C
+
+Pr(R,C;k_W,k_B,k_H) = \frac{k_RN_R^C}{k_WN_W^C+k_BN_B^C+k_HN_H^C} 
+
+Pr((R_1,C_1),...,(R_n,C_n);k_W,k_B,k_H) = 
+\prod_{i=1}^{n} \frac{k_{R_i}N_{R_i}^{C_i}}{k_WN_W^{C_i}+k_BN_B^{C_i}+k_HN_H^{C_i}} 
+
+log[Pr(...)] = 
+\sum_{i=1}^{n} log(k_{R_i}N_{R_i}^{C_i}) - log(k_WN_W^{C_i}+k_BN_B^{C_i}+k_HN_H^{C_i})
+
+\hat{k}_B, \hat{k}_H = \underset{k_B, k_H}{\textrm{argmax}}
+\sum_{i=1}^{n} log(k_{R_i}N_{R_i}^{C_i}) - log(N_W^{C_i}+k_BN_B^{C_i}+k_HN_H^{C_i})
